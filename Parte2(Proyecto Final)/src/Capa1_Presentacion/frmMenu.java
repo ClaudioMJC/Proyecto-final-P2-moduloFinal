@@ -96,6 +96,11 @@ public class frmMenu extends javax.swing.JFrame {
         jMenu6.setText("Facturar");
 
         mnuFacturas.setText("Nueva Factura");
+        mnuFacturas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuFacturasActionPerformed(evt);
+            }
+        });
         jMenu6.add(mnuFacturas);
 
         jMenuBar1.add(jMenu6);
@@ -171,6 +176,20 @@ public class frmMenu extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_mnuProductosActionPerformed
+
+    private void mnuFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuFacturasActionPerformed
+         frmFacturas frm = new frmFacturas();
+        escritorio.add(frm);
+        
+        Dimension sizeContenedor = escritorio.getSize();
+        
+        Dimension sizeFrmFacturas = frm.getSize();
+        
+        frm.setLocation(((int)sizeContenedor.getWidth() - (int)sizeFrmFacturas.getWidth())/2, ((int)sizeContenedor.getHeight() - (int)sizeFrmFacturas.getHeight())/2);
+
+        frm.toFront();
+        frm.setVisible(true);
+    }//GEN-LAST:event_mnuFacturasActionPerformed
 
     /**
      * @param args the command line arguments
