@@ -82,6 +82,7 @@ public class frmProductos extends javax.swing.JInternalFrame {
     }
     
     
+        
     public void Limpiar() {
         txtId.setText("");
         txtDescripcion.setText("");
@@ -90,6 +91,9 @@ public class frmProductos extends javax.swing.JInternalFrame {
         cboId.setSelectedIndex(-1);
     }
 
+    
+    
+    
     private void LimpiarTabla() {
         modelo = new DefaultTableModel() {
             @Override
@@ -105,6 +109,8 @@ public class frmProductos extends javax.swing.JInternalFrame {
         modelo.addColumn("ID Proveedor");
     }
 
+    
+    
     private void CargarDatos(String condicion) throws Exception {
         try {
             LNProducto logica = new LNProducto();
@@ -126,7 +132,7 @@ public class frmProductos extends javax.swing.JInternalFrame {
     }
 
     
-    //Generar entidad modificado para la entidad productos, maneja excepciones
+    //Generar entidad para la entidad productos, maneja excepciones para cada caso
     private Producto GenerarEntidad() {
         Producto producto = new Producto();
         if (!txtId.getText().equals("")) {
