@@ -75,7 +75,7 @@ public class frmProveedores extends javax.swing.JInternalFrame {
         }
     }
      
-     
+     //Generar la entidad
     private Proveedor GenerarEntidad() {
         Proveedor proveedor = new Proveedor();
 
