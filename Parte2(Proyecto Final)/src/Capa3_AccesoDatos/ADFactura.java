@@ -38,7 +38,7 @@ public class ADFactura {
         return _mensaje;
     }
     
-     public int InsertarFactura(Factura factura) throws Exception {
+        public int InsertarFactura(Factura factura) throws Exception {
         int idFactura = -1;
         String sentencia = "INSERT INTO FACTURAS (ID_CLIENTE, ID_USUARIO, FECHA, ESTADO, TOTAL_VENTA) VALUES (?, ?, ?, ?, ?)";
         try {
@@ -63,7 +63,7 @@ public class ADFactura {
         return idFactura;
     }
      
-     
+     //LISTAR 
     public List<Factura> ListarRegistros(String condicion) throws Exception {
         ResultSet rs = null;
         List<Factura> lista = new ArrayList<>();
@@ -165,6 +165,51 @@ public class ADFactura {
 
 
     
+    
+//    public List<Integer> obtenerIdUsuarios() throws Exception {
+//        List<Integer> listaUsuarios = new ArrayList<>();
+//        ResultSet rs = null;
+//
+//        try {
+//            String sentencia = "SELECT ID_USUARIO FROM USUARIOS";
+//            PreparedStatement ps = _cnn.prepareStatement(sentencia);
+//            rs = ps.executeQuery();
+//
+//            while (rs.next()) {
+//                int idUsuario = rs.getInt("ID_USUARIO");
+//                listaUsuarios.add(idUsuario);
+//            }
+//
+//        } catch (Exception e) {
+//            throw e;
+//        }
+//
+//        return listaUsuarios;
+//    }
+    public List<Integer> obtenerIdUsuarios() throws Exception {
+        List<Integer> listaUsuarios = new ArrayList<>();
+        ResultSet rs = null;
+
+        try {
+            String sentencia = "SELECT ID_USUARIO FROM USUARIOS";
+            PreparedStatement ps = _cnn.prepareStatement(sentencia);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int idUsuario = rs.getInt("ID_USUARIO");
+                listaUsuarios.add(idUsuario);
+            }
+
+        } catch (Exception e) {
+            throw e;
+        }
+
+        return listaUsuarios;
+    }
+
+
+    
+    
       
       
       //Este método implementa el uso de un procedimiento almacenado
@@ -189,5 +234,8 @@ public class ADFactura {
 //        return resultado;
 //    }
 
+    
+    
+    
     
 }

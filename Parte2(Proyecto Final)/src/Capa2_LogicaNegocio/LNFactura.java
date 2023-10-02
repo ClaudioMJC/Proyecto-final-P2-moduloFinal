@@ -101,5 +101,12 @@ public int EliminarFactura(Factura factura) throws Exception {
     }
     return resultado;
 }
+
+
+ public List<Integer> obtenerIdUsuarios() throws Exception {
+        ADFactura adFactura = new ADFactura();
+        List<Integer> listaIdUsuarios = adFactura.obtenerIdUsuarios();
+        return listaIdUsuarios;
+    }
     
 }

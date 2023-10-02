@@ -36,7 +36,6 @@ public class frmMenu extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         mnuClientes = new javax.swing.JMenuItem();
         mnuProveedores = new javax.swing.JMenuItem();
-        mnuUsuarios = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         mnuProductos = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
@@ -72,10 +71,12 @@ public class frmMenu extends javax.swing.JFrame {
         jMenu2.add(mnuClientes);
 
         mnuProveedores.setText("Proveedores");
+        mnuProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuProveedoresActionPerformed(evt);
+            }
+        });
         jMenu2.add(mnuProveedores);
-
-        mnuUsuarios.setText("Usuarios");
-        jMenu2.add(mnuUsuarios);
 
         jMenuBar1.add(jMenu2);
 
@@ -154,7 +155,7 @@ public class frmMenu extends javax.swing.JFrame {
         frm.toFront();
         frm.setVisible(true);
     }//GEN-LAST:event_mnuClientesActionPerformed
-
+   
     private void mnuProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuProductosActionPerformed
          frmProductos frm = null;
         try {
@@ -179,6 +180,7 @@ public class frmMenu extends javax.swing.JFrame {
 
     private void mnuFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuFacturasActionPerformed
          frmFacturas frm = new frmFacturas();
+         
         escritorio.add(frm);
         
         Dimension sizeContenedor = escritorio.getSize();
@@ -190,6 +192,20 @@ public class frmMenu extends javax.swing.JFrame {
         frm.toFront();
         frm.setVisible(true);
     }//GEN-LAST:event_mnuFacturasActionPerformed
+
+    private void mnuProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuProveedoresActionPerformed
+          frmProveedores frm = new frmProveedores();
+        escritorio.add(frm);
+        
+        Dimension sizeContenedor = escritorio.getSize();
+        
+        Dimension sizeFrmClientes = frm.getSize();
+        
+        frm.setLocation(((int)sizeContenedor.getWidth() - (int)sizeFrmClientes.getWidth())/2, ((int)sizeContenedor.getHeight() - (int)sizeFrmClientes.getHeight())/2);
+
+        frm.toFront();
+        frm.setVisible(true);
+    }//GEN-LAST:event_mnuProveedoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,6 +257,5 @@ public class frmMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem mnuProductos;
     private javax.swing.JMenuItem mnuProveedores;
     private javax.swing.JMenu mnuSalir;
-    private javax.swing.JMenuItem mnuUsuarios;
     // End of variables declaration//GEN-END:variables
 }
