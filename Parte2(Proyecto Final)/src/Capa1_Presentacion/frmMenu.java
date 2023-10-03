@@ -110,6 +110,11 @@ public class frmMenu extends javax.swing.JFrame {
         jMenu7.setText("Gastos");
 
         mnuGastos.setText("Registrar Gasto");
+        mnuGastos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuGastosActionPerformed(evt);
+            }
+        });
         jMenu7.add(mnuGastos);
 
         jMenuBar1.add(jMenu7);
@@ -207,6 +212,20 @@ public class frmMenu extends javax.swing.JFrame {
         frm.setVisible(true);
     }//GEN-LAST:event_mnuProveedoresActionPerformed
 
+    private void mnuGastosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuGastosActionPerformed
+        frmGasto frm = new frmGasto();
+        escritorio.add(frm);
+        
+        Dimension sizeContenedor = escritorio.getSize();
+        
+        Dimension sizeFrmClientes = frm.getSize();
+        
+        frm.setLocation(((int)sizeContenedor.getWidth() - (int)sizeFrmClientes.getWidth())/2, ((int)sizeContenedor.getHeight() - (int)sizeFrmClientes.getHeight())/2);
+
+        frm.toFront();
+        frm.setVisible(true);
+    }//GEN-LAST:event_mnuGastosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -241,6 +260,9 @@ public class frmMenu extends javax.swing.JFrame {
             }
         });
     }
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane escritorio;

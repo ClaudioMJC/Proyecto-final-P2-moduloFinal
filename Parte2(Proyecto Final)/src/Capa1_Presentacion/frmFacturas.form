@@ -92,28 +92,26 @@
                           <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                           <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btnBuscarP" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                      <Component id="btnEliminarP" min="-2" pref="213" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="btnBuscarP" max="32767" attributes="0"/>
+                                  <Component id="btnEliminarP" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="btnAgregarProducto" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnGuardar" min="-2" pref="188" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
                                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Component id="txtTotal" min="-2" pref="121" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
                                       <Component id="btnLimpiar" min="-2" pref="121" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -221,7 +219,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Abastecedor &quot;El Buen Vencindario&quot;"/>
+        <Property name="text" type="java.lang.String" value="Abastecedor &quot;El Buen Vecindario&quot;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtIdFactura">
