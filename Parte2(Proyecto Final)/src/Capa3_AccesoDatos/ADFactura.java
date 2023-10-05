@@ -76,6 +76,7 @@ public class ADFactura {
             rs = stm.executeQuery(sentencia);
             while (rs.next()) {
                 lista.add(new Factura(
+                        rs.getInt("ID_FACTURA"),
                         rs.getInt("ID_CLIENTE"),
                         rs.getInt("ID_USUARIO"),
                         rs.getDate("FECHA"),
