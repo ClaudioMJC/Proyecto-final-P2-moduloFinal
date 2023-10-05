@@ -33,7 +33,8 @@ public class Factura {
     }
 
     // Constructor con parámetros
-    public Factura(int idCliente, int idUsuario, Date fecha, String estado, double totalVenta) {
+    public Factura(int idFactura, int idCliente, int idUsuario, Date fecha, String estado, double totalVenta) {
+        this.idFactura=idFactura;
         this.idCliente = idCliente;
         this.idUsuario = idUsuario;
         this.fecha = fecha;

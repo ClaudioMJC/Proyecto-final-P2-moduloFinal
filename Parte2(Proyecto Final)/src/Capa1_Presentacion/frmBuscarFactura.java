@@ -50,10 +50,12 @@ public class frmBuscarFactura extends javax.swing.JDialog {
         };
         tblFactura.setModel(model);
         model.addColumn("N°Factura");
-        model.addColumn("ID_Usuario");
         model.addColumn("ID Cliente");
-        model.addColumn("Estado");
+        model.addColumn("ID_Usuario");
         model.addColumn("Fecha");
+        model.addColumn("Estado");
+        model.addColumn("Total_Venta");
+        
     }
     
       

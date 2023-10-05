@@ -127,8 +127,10 @@ public class frmFacturas extends javax.swing.JInternalFrame {
         modelo2.addColumn("N°Factura");
         modelo2.addColumn("ID_Usuario");
         modelo2.addColumn("ID Cliente");
-        modelo2.addColumn("Estado");
         modelo2.addColumn("Fecha");
+        modelo2.addColumn("Estado");
+         modelo2.addColumn("Total_Venta");
+        
     }
     
     
